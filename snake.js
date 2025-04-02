@@ -25,4 +25,20 @@ var Snake=(function() {
         game.reset();
         }
 
+    var game={
+        reset: function(){
+            ctx.fillStyle= "grey";
+            ctx.fillRect(0,0,canv.width,canv.height);
+            tail=INITIAL_TAIL;
+            points=0;
+            velocity.x=0;
+            velocity.y=0;
+            player.x=INITIAL_PLAYER.x;
+            player.y=INITIAL_PLAYER.y;
+            reward=-1;
+            lastAction=Action.none;
+
+        }
+    }    
+
 });
