@@ -19,4 +19,10 @@ var Snake=(function() {
     Object.freeze(Action);
     var lastAction=Action.none;
 
+    function setup(){
+        canv=document.getElementById("gc");
+        ctx=canv.getContext("2d");
+        game.reset();
+        }
+
 });
