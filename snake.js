@@ -38,7 +38,36 @@ var Snake=(function() {
             reward=-1;
             lastAction=Action.none;
 
-        }
-    }    
+            trail=[];
+            trail.push({x:player.x, y:player.y});
 
-});
+    }
+
+    action: {
+        up: function() {
+            if (lastAction != Action.down) {
+                velocity.x = 0;
+                velocity.y = -1;
+            }
+        },
+        down: function() {
+            if (lastAction != Action.up) {
+                velocity.x = 0;
+                velocity.y = 1;
+            }
+        },
+        left: function() {
+            if (lastAction != Action.right) {
+                velocity.x = -1;
+                velocity.y = 0;
+            }
+        },
+        right: function() {
+            if (lastAction != Action.left) {
+                velocity.x = 1;
+                velocity.y = 0;
+            }
+        }
+    },
+    
+}
